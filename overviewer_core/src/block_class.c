@@ -104,7 +104,7 @@ const mc_block_t block_class_door[] = {
     block_birch_door,
     block_jungle_door,
     block_acacia_door,
-    block_dark_oak_door,};
+    block_dark_oak_door};
 const size_t block_class_door_len = COUNT_OF(block_class_door);
 
 const mc_block_t block_class_fence[] = {

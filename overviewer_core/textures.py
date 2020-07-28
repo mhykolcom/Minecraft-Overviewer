@@ -399,6 +399,17 @@ class Textures(object):
         firetexture = (fireNS, fireEW)
         self.firetexture = firetexture
         return firetexture
+
+    def load_soul_fire(self):
+        """Special-case function for loading soul fire."""
+        firetexture = getattr(self, "firetexture", None)
+        if firetexture:
+            return firetexture
+        fireNS = self.load_image_texture("assets/minecraft/textures/block/soul_fire_0.png")
+        fireEW = self.load_image_texture("assets/minecraft/textures/block/soul_fire_1.png")
+        firetexture = (fireNS, fireEW)
+        self.firetexture = firetexture
+        return firetexture
     
     def load_portal(self):
         """Special-case function for loading portal."""
@@ -1668,6 +1679,8 @@ billboard(blockid=32, imagename="assets/minecraft/textures/block/dead_bush.png")
 
 # chain
 billboard(blockid=11532, imagename="assets/minecraft/textures/block/chain.png")
+# nether sprout
+billboard(blockid=11570, imagename="assets/minecraft/textures/block/nether_sprouts.png")
 
 #Nether Vines
 billboard(blockid=11576, imagename="assets/minecraft/textures/block/weeping_vines.png")
@@ -1697,6 +1710,10 @@ def flower(self, blockid, data):
 sprite(blockid=39, imagename="assets/minecraft/textures/block/brown_mushroom.png")
 # red mushroom
 sprite(blockid=40, imagename="assets/minecraft/textures/block/red_mushroom.png")
+# warped fungus
+sprite(blockid=11551, imagename="assets/minecraft/textures/block/warped_fungus.png")
+# crimson fungus
+sprite(blockid=11535, imagename="assets/minecraft/textures/block/crimson_fungus.png")
 # block of gold
 block(blockid=41, top_image="assets/minecraft/textures/block/gold_block.png")
 # block of iron
@@ -2095,6 +2112,23 @@ def composter(self, blockid, data):
 @material(blockid=51, data=list(range(16)), transparent=True)
 def fire(self, blockid, data):
     firetextures = self.load_fire()
+    side1 = self.transform_image_side(firetextures[0])
+    side2 = self.transform_image_side(firetextures[1]).transpose(Image.FLIP_LEFT_RIGHT)
+    
+    img = Image.new("RGBA", (24,24), self.bgcolor)
+
+    alpha_over(img, side1, (12,0), side1)
+    alpha_over(img, side2, (0,0), side2)
+
+    alpha_over(img, side1, (0,6), side1)
+    alpha_over(img, side2, (12,6), side2)
+    
+    return img
+
+# soul fire
+@material(blockid=11582, data=list(range(16)), transparent=True)
+def fire(self, blockid, data):
+    firetextures = self.load_soul_fire()
     side1 = self.transform_image_side(firetextures[0])
     side2 = self.transform_image_side(firetextures[1]).transpose(Image.FLIP_LEFT_RIGHT)
     
@@ -3833,13 +3867,13 @@ block(blockid=11533, top_image="assets/minecraft/textures/block/crimson_nylium.p
 # warped nylium
 block(blockid=11534, top_image="assets/minecraft/textures/block/warped_nylium.png", side_image="assets/minecraft/textures/block/warped_nylium_side.png", solid=True)
 # warped stem
-block(blockid=11547, top_image="assets/minecraft/textures/block/warped_stem_top.png", side_image="assets/minecraft/textures/block/warped_stem.png", solid=True)
+block(blockid=11563, top_image="assets/minecraft/textures/block/warped_stem_top.png", side_image="assets/minecraft/textures/block/warped_stem.png", solid=True)
 # stripped warped stem
-block(blockid=11548, top_image="assets/minecraft/textures/block/stripped_warped_stem_top.png", side_image="assets/minecraft/textures/block/stripped_warped_stem.png", solid=True)
+block(blockid=11564, top_image="assets/minecraft/textures/block/stripped_warped_stem_top.png", side_image="assets/minecraft/textures/block/stripped_warped_stem.png", solid=True)
 # crimson stem
-block(blockid=11563, top_image="assets/minecraft/textures/block/crimson_stem_top.png", side_image="assets/minecraft/textures/block/crimson_stem.png", solid=True)
+block(blockid=11547, top_image="assets/minecraft/textures/block/crimson_stem_top.png", side_image="assets/minecraft/textures/block/crimson_stem.png", solid=True)
 # stripped crimson stem
-block(blockid=11564, top_image="assets/minecraft/textures/block/stripped_crimson_stem_top.png", side_image="assets/minecraft/textures/block/stripped_crimson_stem.png", solid=True)
+block(blockid=11548, top_image="assets/minecraft/textures/block/stripped_crimson_stem_top.png", side_image="assets/minecraft/textures/block/stripped_crimson_stem.png", solid=True)
 
 # portal
 @material(blockid=90, data=[1, 2, 4, 5, 8, 10], transparent=True)
