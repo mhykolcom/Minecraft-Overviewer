@@ -802,6 +802,82 @@ class RegionSet(object):
             'minecraft:sweet_berry_bush': (11505, 0),
             'minecraft:campfire': (11506, 0),
             'minecraft:bell': (11507, 0),
+            # 1.16 blocks below
+            'minecraft:soul_campfire': (11508, 0),
+            'minecraft:soul_lantern': (11509, 0),
+            'minecraft:soul_soil': (11510, 0),
+            'minecraft:blackstone': (11511, 0),
+            'minecraft:blackstone_slab': (11512, 0),
+            'minecraft:blackstone_stairs': (11513, 0),
+            'minecraft:gilded_blackstone': (11514, 0),
+            'minecraft:polished_blackstone': (11515, 0),
+            'minecraft:polished_blackstone_slab': (11516, 0),
+            'minecraft:polished_blackstone_stairs': (11517, 0),
+            'minecraft:chiseled_polished_blackstone': (11518, 0),
+            'minecraft:polished_blackstone_bricks': (11519, 0),
+            'minecraft:polished_blackstone_brick_slab': (11520, 0),
+            'minecraft:polished_blackstone_brick_stairs': (11521, 0),
+            'minecraft:cracked_polished_blackstone_bricks': (11522, 0),
+            'minecraft:polished_blackstone_pressure_plate': (11523, 0),
+            'minecraft:polished_blackstone_button': (11524, 0),
+            'minecraft:soul_torch': (11525, 5),
+            'minecraft:soul_wall_torch': (11525, 0),
+            'minecraft:ancient_debris': (11526, 0),
+            'minecraft:netherite_block': (11527, 0),
+            'minecraft:basalt': (11528, 0),
+            'minecraft:polished_basalt': (11529, 0),
+            'minecraft:chiseled_nether_bricks': (11530, 0),
+            'minecraft:cracked_nether_bricks': (11531, 0),
+            'minecraft:chain': (11532, 0),
+            'minecraft:crimson_nylium': (11533, 0),
+            'minecraft:warped_nylium': (11534, 0),
+            # 'minecraft:crimson_fungus': (11535, 0),
+            'minecraft:crimson_roots': (11536, 0),
+            'minecraft:crimson_planks': (11537, 0),
+            'minecraft:crimson_slab': (11538, 0),
+            'minecraft:crimson_pressure_plate': (11539, 0),
+            'minecraft:crimson_fence': (11540, 0),
+            'minecraft:crimson_trapdoor': (11541, 0),
+            'minecraft:crimson_fence_gate': (11542, 0),
+            'minecraft:crimson_stairs': (11543, 0),
+            'minecraft:crimson_button': (11544, 0),
+            # 'minecraft:crimson_door': (11545, 0),
+            'minecraft:crimson_sign': (11546, 0),
+            'minecraft:crimson_stem': (11547, 0),
+            'minecraft:stripped_crimson_stem': (11548, 0),
+            'minecraft:crimson_hyphae': (11549, 0),
+            'minecraft:stripped_crimson_hyphae': (11550, 0),
+            'minecraft:warped_fungus': (11551, 0),
+            'minecraft:warped_roots': (11552, 0),
+            'minecraft:warped_planks': (11553, 0),
+            'minecraft:warped_slab': (11554, 0),
+            'minecraft:warped_pressure_plate': (11555, 0),
+            'minecraft:warped_fence': (11556, 0),
+            'minecraft:warped_trapdoor': (11557, 0),
+            'minecraft:warped_fence_gate': (11558, 0),
+            'minecraft:warped_stairs': (11559, 0),
+            'minecraft:warped_button': (11560, 0),
+            # 'minecraft:warped_door': (11561, 0),
+            'minecraft:warped_sign': (11562, 0),
+            'minecraft:warped_stem': (11563, 0),
+            'minecraft:stripped_warped_stem': (11564, 0),
+            'minecraft:warped_hyphae': (11565, 0),
+            'minecraft:stripped_warped_hyphae': (11566, 0),
+            'minecraft:crying_obsidian': (11567, 0),
+            'minecraft:lodestone': (11568, 0),
+            'minecraft:nether_gold_ore': (11569, 0),
+            # 'minecraft:nether_sprouts': (11570, 0),
+            'minecraft:quartz_bricks': (11571, 0),
+            'minecraft:respawn_anchor': (11572, 0),
+            'minecraft:shroomlight': (11573, 0),
+            'minecraft:target': (11574, 0),
+            'minecraft:warped_wart_block': (11575, 0),
+            'minecraft:weeping_vines': (11576, 0),
+            'minecraft:weeping_vines_plant': (11577, 0),
+            'minecraft:twisting_vines': (11578, 0),
+            'minecraft:twisting_vines_plant': (11579, 0),
+            'minecraft:crimson_wall_sign': (11580, 0),
+            'minecraft:warped_wall_sign': (11581, 0),
             # adding a gap in the numbering of walls to keep them all
             # in one numbering block starting at 21000
             'minecraft:andesite_wall': (21000, 0),
@@ -818,6 +894,10 @@ class RegionSet(object):
             'minecraft:red_sandstone_wall': (21011, 0),
             'minecraft:sandstone_wall': (21012, 0),
             'minecraft:stone_brick_wall': (21013, 0),
+            # 1.16 walls
+            'minecraft:blackstone_wall': (21014, 0),
+            'minecraft:polished_blackstone_wall': (21015, 0),
+            'minecraft:polished_blackstone_brick_wall': (21016, 0),
         }
 
         colors = [   'white', 'orange', 'magenta', 'light_blue',
@@ -847,7 +927,7 @@ class RegionSet(object):
 
     def _get_block(self, palette_entry):
         wood_slabs = ('minecraft:oak_slab','minecraft:spruce_slab','minecraft:birch_slab','minecraft:jungle_slab',
-                        'minecraft:acacia_slab','minecraft:dark_oak_slab','minecraft:petrified_oak_slab')
+                        'minecraft:acacia_slab','minecraft:dark_oak_slab','minecraft:petrified_oak_slab','minecraft:crimson_slab','minecraft:warped_slab')
         stone_slabs = ('minecraft:stone_slab', 'minecraft:sandstone_slab','minecraft:red_sandstone_slab',
                         'minecraft:cobblestone_slab', 'minecraft:brick_slab','minecraft:purpur_slab',
                         'minecraft:stone_brick_slab', 'minecraft:nether_brick_slab',
@@ -858,7 +938,8 @@ class RegionSet(object):
                         'minecraft:cut_sandstone_slab','minecraft:smooth_red_sandstone_slab',
                         'minecraft:cut_red_sandstone_slab','minecraft:end_stone_brick_slab',
                         'minecraft:mossy_cobblestone_slab','minecraft:mossy_stone_brick_slab',
-                        'minecraft:smooth_quartz_slab','minecraft:smooth_stone_slab'
+                        'minecraft:smooth_quartz_slab','minecraft:smooth_stone_slab','minecraft:blackstone_slab'
+                        'minecraft:polished_blackstone_slab','minecraft:polished_blackstone_brick_slab'
                          )
         prismarine_slabs = ('minecraft:prismarine_slab','minecraft:dark_prismarine_slab','minecraft:prismarine_brick_slab')
 
@@ -969,6 +1050,12 @@ class RegionSet(object):
                     elif key == 'minecraft:smooth_stone_slab':
                         block = 11313   # minecraft:smooth_stone
                         data  = 0
+                    elif key == 'minecraft:blackstone_slab':
+                        block = 11512# minecraft:blackstone_slab
+                    elif key == 'minecraft:polished_blackstone_slab':
+                        block = 11516# minecraft:polished_blackstone_slab
+                    elif key == 'minecraft:polished_blackstone_brick_slab':
+                        block = 11520# minecraft:polished_blackstone_blackstone_slab
 
                 elif key in  prismarine_slabs:
                     block = 168         # minecraft:prismarine variants
@@ -1029,7 +1116,7 @@ class RegionSet(object):
                 data = 3
             if axis == 'z':
                 data = 4
-        elif key in ['minecraft:redstone_torch','minecraft:redstone_wall_torch','minecraft:wall_torch']:
+        elif key in ['minecraft:redstone_torch','minecraft:redstone_wall_torch','minecraft:wall_torch','minecraft:soul_wall_torch']:
             if key.startswith('minecraft:redstone_') and palette_entry['Properties']['lit'] == 'true':
                 block += 1
             if key.endswith('wall_torch'):
@@ -1141,7 +1228,7 @@ class RegionSet(object):
             # A moisture level of 7 has a different texture from other farmland
             data = 1 if palette_entry['Properties'].get('moisture', '0') == '7' else 0
         elif key in ['minecraft:grindstone', 'minecraft:lectern', 'minecraft:campfire',
-                     'minecraft:bell']:
+                     'minecraft:bell', 'minecraft:soul_campfire']:
             p = palette_entry['Properties']
             data = {'south': 0, 'west': 1, 'north': 2, 'east': 3}[p['facing']]
             if key == 'minecraft:grindstone':
@@ -1150,6 +1237,9 @@ class RegionSet(object):
                 if p['has_book'] == 'true':
                     data |= 4
             elif key == 'minecraft:campfire':
+                if p['lit'] == 'true':
+                    data |= 4
+            elif key == 'minecraft:soul_campfire':
                 if p['lit'] == 'true':
                     data |= 4
             elif key == 'minecraft:bell':
