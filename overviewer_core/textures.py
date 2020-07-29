@@ -1681,6 +1681,10 @@ billboard(blockid=32, imagename="assets/minecraft/textures/block/dead_bush.png")
 billboard(blockid=11532, imagename="assets/minecraft/textures/block/chain.png")
 # nether sprout
 billboard(blockid=11570, imagename="assets/minecraft/textures/block/nether_sprouts.png")
+# crimson roots
+billboard(blockid=11536, imagename="assets/minecraft/textures/block/crimson_roots.png")
+# warped roots
+billboard(blockid=11552, imagename="assets/minecraft/textures/block/warped_roots.png")
 
 #Nether Vines
 billboard(blockid=11576, imagename="assets/minecraft/textures/block/weeping_vines.png")

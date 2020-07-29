@@ -939,8 +939,8 @@ class RegionSet(object):
                         'minecraft:cut_sandstone_slab','minecraft:smooth_red_sandstone_slab',
                         'minecraft:cut_red_sandstone_slab','minecraft:end_stone_brick_slab',
                         'minecraft:mossy_cobblestone_slab','minecraft:mossy_stone_brick_slab',
-                        'minecraft:smooth_quartz_slab','minecraft:smooth_stone_slab','minecraft:blackstone_slab'
-                        'minecraft:polished_blackstone_slab','minecraft:polished_blackstone_brick_slab'
+                        'minecraft:smooth_quartz_slab','minecraft:smooth_stone_slab',
+                        'minecraft:polished_blackstone_slab','minecraft:polished_blackstone_brick_slab','minecraft:blackstone_slab'
                          )
         prismarine_slabs = ('minecraft:prismarine_slab','minecraft:dark_prismarine_slab','minecraft:prismarine_brick_slab')
 

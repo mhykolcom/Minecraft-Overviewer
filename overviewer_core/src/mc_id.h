@@ -376,7 +376,7 @@ enum mc_block_id {
     block_crimson_fence_gate = 11542,
     block_crimson_stairs = 11543,
     block_crimson_button = 11544,
-    //block_crimson_door = 11545,
+    block_crimson_door = 11545,
     block_crimson_sign = 11546,
     block_crimson_stem = 11547,
     block_stripped_crimson_stem = 11548,
@@ -392,7 +392,7 @@ enum mc_block_id {
     block_warped_fence_gate = 11558,
     block_warped_stairs = 11559,
     block_warped_button = 11560,
-    //block_warped_door = 11561,
+    block_warped_door = 11561,
     block_warped_sign = 11562,
     block_warped_stem = 11563,
     block_stripped_warped_stem = 11564,
@@ -413,6 +413,7 @@ enum mc_block_id {
     block_twisting_vines_plant = 11579,
     block_crimson_wall_sign = 11580,
     block_warped_wall_sign = 11581,
+    block_soul_fire = 11582,
     //  adding a gap in the numbering of walls to keep them all
     // in one numbering block starting at 21000
     block_andesite_wall = 21000,
